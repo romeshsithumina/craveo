@@ -71,7 +71,7 @@ main {
   cursor: pointer;
   transition: transform 0.3s;
   max-height: 200px;
-  min-height: 200px; /* Added min-height */
+  min-height: 200px;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -83,7 +83,7 @@ main {
 
 #recipe-details {
   display: none;
-  overflow-x: hidden; /* Hide horizontal scrollbar */
+  overflow-x: hidden;
 }
 
 .details-content {

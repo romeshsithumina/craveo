@@ -128,5 +128,3 @@ function displayFilteredRecipes(filteredRecipes) {
 
 // Initial display
 displayRecipes();
-
-// ... (remaining JavaScript)
