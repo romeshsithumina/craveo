@@ -81,11 +81,12 @@ function displayRecipes() {
     recipeCard.classList.add("recipe-card");
     recipeCard.innerHTML = `
             <h3 id="recipe-card-text">${recipe.name}</h3>
-            <p><img id="recipe-card-img" src="/assets/ingredient.jpg" alt="ingredients " height="20px" width="20" />${truncateText(
+            <p><img id="recipe-card-img" src="/assets/ingredient.jpg" alt="ingredients" height="20px" width="20" />${truncateText(
               recipe.ingredients,
               60
             )}</p>
-            <button onclick="editRecipe(${index})">Edit Recipe</button>
+            <button id="recipe-card-btn-edit" onclick="editRecipe(${index})">Edit</button>
+            <button onclick="deleteRecipe(${index})">Delete</button>
         `;
     recipeCard.addEventListener("click", () => displayRecipeDetails(index));
     recipeList.appendChild(recipeCard);
@@ -116,7 +117,9 @@ function displayFilteredRecipes(filteredRecipes) {
     recipeCard.innerHTML = `
             <h3 id="recipe-card-text>${recipe.name}</h3>
             <p>${truncateText(recipe.ingredients, 60)}</p>
-            <button onclick="editRecipe(${index})">Edit Recipe</button>
+            <button id="recipe-card-btn" onclick="editRecipe(${index})"><img src="/assets/edit.jpg" alt="update" height="20px" width="20" /></button>
+            <button onclick="deleteRecipe(${index})">Delete</button>
+
         `;
     recipeCard.addEventListener("click", () => displayRecipeDetails(index));
     recipeList.appendChild(recipeCard);
